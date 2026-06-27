@@ -176,11 +176,6 @@ const ZONE_STYLES = {
   power:      { color: '#ff0000', fill: '#b91c1c', label: 'Power Plant' },
 };
 
-const INDIA_BOUNDS = [
-  [8, 68],
-  [37, 97],
-];
-
 function getTempColor(t) {
   if (!t) return '#6b7280';
   if (t < 28) return '#3b82f6';
@@ -523,10 +518,6 @@ export default function IndiaGEEMap() {
           className="h-full w-full"
           zoomControl={false}
           style={{ background: '#030712' }}
-          bounds={INDIA_BOUNDS}
-          maxBounds={INDIA_BOUNDS}
-          maxBoundsViscosity={0.7}
-          scrollWheelZoom={false}
         >
           {/* Dark base map */}
           <TileLayer
